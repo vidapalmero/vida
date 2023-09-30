@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
 # 设置各变量
-UUID='fddec892-939d-43a5-b4e6-44a60469a936'
-VMESS_WSPATH='/DASp209429bisvppd02HUASDBUno8UDBSF98299BUDSV36gfduv2387g782832BYDS5971'
-VLESS_WSPATH='/DASp209429bisvppd02HUASDBUno8UDBSF98299BUDSV36gfduv2387g782832BYDS5972'
-TROJAN_WSPATH='/DASp209429bisvppd02HUASDBUno8UDBSF98299BUDSV36gfduv2387g782832BYDS5973'
-SS_WSPATH='/DASp209429bisvppd02HUASDBUno8UDBSF98299BUDSV36gfduv2387g782832BYDS5974'
+UUID='b1d207d5-cff5-4bed-afbd-f6d30befc856'
+VMESS_WSPATH='/down'
+VLESS_WSPATH='/up'
+TROJAN_WSPATH='/vida'
+SS_WSPATH='/loop'
 
 generate_config() {
-  cat > config.json << EOF
+  cat &gt; config.json << EOF
 {
     "log": {
         "access": "/dev/null",
@@ -19,7 +19,7 @@ generate_config() {
         {
             "port": 8080,
             "protocol": "vless",
-            "settings": {
+            "Settings": {
                 "clients": [
                     {
                         "id": "${UUID}",
